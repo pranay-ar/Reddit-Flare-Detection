@@ -1,1 +1,2 @@
 web: gunicorn Website.app:app 
+heroku ps:scale web=1
