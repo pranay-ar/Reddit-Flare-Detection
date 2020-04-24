@@ -43,12 +43,12 @@ def prediction(url):
 import flask
 import pickle
 import pandas as pd
-#from flask import Flask, render_template, request
+from flask import Flask, render_template, request
 
 
 # Initialise the Flask app
-app = flask.Flask(__name__, template_folder='templates')
-#app = Flask(__name__)
+#app = flask.Flask(__name__, template_folder='templates')
+app = Flask(__name__)
 
 # Set up the main route
 @app.route('/', methods=['GET', 'POST'])
