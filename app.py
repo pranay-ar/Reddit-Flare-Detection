@@ -5,6 +5,8 @@ import gensim
 import praw
 from praw.models import MoreComments
 from zipfile import ZipFile 
+import json
+from werkzeug.utils import secure_filename
 
 model = pickle.load(open('model/model.pkl','rb'))
 
@@ -68,12 +70,36 @@ def main():
         # Render the form again, but add in the prediction and remind user
         # of the values they input before
         return flask.render_template('main.html', original_input={'url':str(text)}, result=flair,)
-#@app.route("/stats")
-#def stats():
-#	bar = create_plot()
-#	return flask.render_template('graph.html',plot=bar)
 
 
+@app.route("/automated_testing")
+def index2():                                                                                         
+    return (render_template("test.html"))
+
+@app.route("/automated_testing", methods = ['POST', 'GET'])
+def automated_testing():
+    #print("Hello")
+    #print(request.method)
+    if request.method == 'POST':
+        #print("Hello 2")
+        myfile = request.files['upload_file']
+        print("Hello")
+        myfile.save(secure_filename(myfile.filename))
+        lst = []
+        with open(myfile.filename, 'r') as filein:
+            for url in filein:
+                lst.append(url)
+
+        dic = {}
+        for i in lst:
+            i = i[:-1]
+            pred = prediction(i)
+            key = i
+            value = pred[0]
+            dic.update({key : value})
+
+    d = json.dumps(dic)
+    return json.dumps(d)
 if __name__ == '__main__':
     app.run(debug=True)
  #http_server = WSGIServer(('', 5000), app)
