@@ -8,7 +8,7 @@ from zipfile import ZipFile
 import json
 from werkzeug.utils import secure_filename
 
-model = pickle.load(open('model/model.pkl','rb'))
+model = pickle.load(open('model/model1.pkl','rb'))
 
 
 reddit = praw.Reddit(client_id='U2Ag2amSBBT2yA', client_secret='dBkSqsN5cTkLXLnaJwmfe0M4cbo', user_agent='flare', username='pranay-ar',password='Elisha2835!')
