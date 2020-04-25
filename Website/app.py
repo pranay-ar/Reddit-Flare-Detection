@@ -44,6 +44,7 @@ import flask
 import pickle
 import pandas as pd
 from flask import Flask, render_template, request
+#from gevent.pywsgi import WSGIServer
 
 
 # Initialise the Flask app
@@ -75,3 +76,5 @@ def main():
 
 if __name__ == '__main__':
     app.run(debug=True)
+ #http_server = WSGIServer(('', 5000), app)
+ #http_server.serve_forever()
