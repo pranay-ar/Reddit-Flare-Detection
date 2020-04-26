@@ -17,9 +17,7 @@ The directory is a ***Flask*** web application set-up for hosting on *Heroku* se
   8. [data](https://github.com/pranay-ar/Reddit-Flare-Detection/tree/master/Data) - Folder containing CSV and MongoDB instances of the collected data.
   9. [Models](https://github.com/pranay-ar/Reddit-Flare-Detection/tree/master/model) - Folder containing the saved model.
   10. [Jupyter Notebooks](https://github.com/pranay-ar/Reddit-Flare-Detection/tree/master/model) - Folder containing Jupyter Notebooks to collect Reddit India data and train Machine Learning models. 
-### Codebase
 
-The entire code has been developed using Python programming language, utilizing it's powerful text processing and machine learning modules. The application has been developed using Django web framework and hosted on Heroku web server.
 
 ### Project Execution
 
@@ -128,7 +126,7 @@ The approach taken for the task is as follows:
 
 ### Intuition behind Combined Feature
 
-The features independently showed a test accuracy near to **82%** with the `URL` feature giving the worst accuracies during the experiments. 
+The features independently showed a test accuracy near to **82%** with the `URL` feature giving the worst accuracies during the training. 
 ### References
 
 1. [How to scrape data from Reddit](http://www.storybench.org/how-to-scrape-reddit-with-python/)
