@@ -41,4 +41,4 @@ soupsieve==1.9.2
 update-checker==0.16
 urllib3==1.26.5
 websocket-client==0.56.0
-Werkzeug==0.15.5
+Werkzeug==2.2.3
