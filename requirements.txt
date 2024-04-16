@@ -11,7 +11,7 @@ docutils==0.15
 Flask==1.1.1
 gensim==3.8.0
 gunicorn==19.9.0   
-idna==2.8
+idna==3.7
 itsdangerous==1.1.0
 Jinja2==2.11.3
 jmespath==0.9.4
